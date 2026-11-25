@@ -1,0 +1,614 @@
+{
+  "updatedAt": "2026-11-25T05:34:06Z",
+  "items": [
+    {
+      "id": "whatsposed",
+      "name": "WhatsPosed",
+      "repo": "WhatsPosed",
+      "kind": "apk",
+      "packageId": "com.cq61tech.whatsposed",
+      "altPackageIds": [
+        "com.wmods.wppenhacer"
+      ],
+      "author": "cq61tech",
+      "shortDescription": "WhatsApp tools for Android",
+      "description": "WhatsApp tools for Android",
+      "license": "GPL-3.0",
+      "iconUrl": "",
+      "bannerUrl": "",
+      "sourceUrl": "https://github.com/cq61tech/WhatsPosed",
+      "telegramUrl": "https://t.me/cq61stuff",
+      "websiteUrl": "",
+      "repoUrl": "",
+      "latestVersion": "v0.6.8-1",
+      "whatsNew": "## What's New in v0.6.8-1\r\n\r\n### iOS 27 Theme Polish & Layout Fixes\r\n- **`•••` Liquid Glass Quick Menu:** Extra home toolbar action icons (such as ghost mode, restart, trash, and seen toggles) now automatically tuck into the left `•••` **Liquid Glass** dropdown menu alongside WhatsApp's native overflow menu (*More Options*), leaving only the frosted camera and green `+` button on the top right.\r\n- **R8-Safe Green `+` Alignment:** Replaced obfuscation-sensitive toolbar gravity reflection with direct layout positioning so the circular green new-chat button stays cleanly pinned to the right edge.\r\n- **Status & Search Bar Spacing:** Fixed an overlap where the 2nd-tier large header (*Chats / Updates / Calls*) clipped the top of circular status cards (`IGStatus`) and crowded the search bar.\r\n- **Archive Gesture & Duplicate Icon Guard:** Connected the hidden archive multi-tap / long-press shortcut directly to the large header title and automatically paused the legacy `New Chat` toolbar icon when the iOS 27 header is active.\r\n\r\n### Build Scripts & Documentation\r\n- **Upstream Sync & Rebrand Hardening:** Updated `rebrand.sh` to properly parse hyphenated version strings (`0.6.8-1`) and preserve all custom Compose activities (`ThemesActivity`, `ManualColorsActivity`, `MaterialExpressiveActivity`, `ElasticMessagesActivity`, `FloatingBarActivity`, `AppearanceActivity`) in `AndroidManifest.xml`, alongside safer merge protection in `wpmerge.sh`.\r\n- **README Refresh:** Updated `README.md` with the WhatsPosed logo, UI screenshots, compatibility matrix, and honest platform notes.\r\n-",
+      "releases": [
+        {
+          "tag": "v0.6.8-1",
+          "name": "WhatsPosed v0.6.8-1",
+          "publishedAt": "2026-11-22T12:43:41Z",
+          "notes": "## What's New in v0.6.8-1\r\n\r\n### iOS 27 Theme Polish & Layout Fixes\r\n- **`•••` Liquid Glass Quick Menu:** Extra home toolbar action icons (such as ghost mode, restart, trash, and seen toggles) now automatically tuck into the left `•••` **Liquid Glass** dropdown menu alongside WhatsApp's native overflow menu (*More Options*), leaving only the frosted camera and green `+` button on the top right.\r\n- **R8-Safe Green `+` Alignment:** Replaced obfuscation-sensitive toolbar gravity reflection with direct layout positioning so the circular green new-chat button stays cleanly pinned to the right edge.\r\n- **Status & Search Bar Spacing:** Fixed an overlap where the 2nd-tier large header (*Chats / Updates / Calls*) clipped the top of circular status cards (`IGStatus`) and crowded the search bar.\r\n- **Archive Gesture & Duplicate Icon Guard:** Connected the hidden archive multi-tap / long-press shortcut directly to the large header title and automatically paused the legacy `New Chat` toolbar icon when the iOS 27 header is active.\r\n\r\n### Build Scripts & Documentation\r\n- **Upstream Sync & Rebrand Hardening:** Updated `rebrand.sh` to properly parse hyphenated version strings (`0.6.8-1`) and preserve all custom Compose activities (`ThemesActivity`, `ManualColorsActivity`, `MaterialExpressiveActivity`, `ElasticMessagesActivity`, `FloatingBarActivity`, `AppearanceActivity`) in `AndroidManifest.xml`, alongside safer merge protection in `wpmerge.sh`.\r\n- **README Refresh:** Updated `README.md` with the WhatsPosed logo, UI screenshots, compatibility matrix, and honest platform notes.\r\n-",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.6.8-1.A76A7539.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.8-1/WhatsPosed-0.6.8-1.A76A7539.apk",
+              "size": 16703173
+            }
+          ]
+        },
+        {
+          "tag": "v0.6.8",
+          "name": "WhatsPosed v0.6.8",
+          "publishedAt": "2026-11-22T11:36:57Z",
+          "notes": "## What's New in v0.6.8\r\n\r\n### Unified Themes Center & Conflict-Free Architecture\r\nIntroduced a centralized **Themes** hub (*Customization > Themes*) powered by `ThemeCoordinator` so full UI theme packs can switch cleanly without clashing with legacy overrides:\r\n\r\n- **Exclusive Theme Switching:** Switch seamlessly between **iOS 27 (Liquid Glass)**, **Material 3 Expressive**, and **Default (Stock WhatsApp)**.\r\n- **Automatic Conflict Guards:** Selecting **iOS 27** automatically suspends Monet/manual color overrides, custom home toolbar titles, and manual bubble overrides at the hook level—restoring your settings when switching back—while relocating manual color, Monet, and bubble controls into a dedicated **Manual Colors, Monet & Bubbles** screen.\r\n- **Signature Theme Docks:** Each theme automatically applies its matching floating dock (**Liquid Glass** for iOS 27, **Material You Pill** for Material 3 Expressive) while leaving dock presets and geometry freely customizable afterward.\r\n\r\n---\r\n\r\n### iOS 27 (Liquid Glass) Theme Pack\r\nAdded a full iOS 27 visual overhaul with fine-grained toggles inside the Themes screen:\r\n\r\n- **2-Tier iOS Home Header & Liquid Glass `•••` Menu:** Features a frosted circular `•••` pill on the left, frosted camera and bright green `+` new-chat button on the right, and a bold dynamic 2nd-tier header (*Chats / Updates / Calls*) with support for the hidden archive tap/long-press gesture.\r\n- **Smart Toolbar Decluttering:** Extra home toolbar action icons (such as restart, ghost mode, clear/trash, and seen toggles) automatically tuck into the `•••` **Liquid Glass** dropdown menu alongside WhatsApp's native overflow menu.\r\n- **Bundled SF Pro Typography:** Embedded SF Pro Display (`Regular`, `Medium`, `Semibold`, `Bold`) directly into the module for authentic iOS typography across WhatsApp.\r\n- **OLED Canvas, Liquid Glass Overlays & iOS Bubbles:** Pure `#000000` OLED dark / crisp white light surfaces, frosted search pill, native iOS-styled chat bubbles, Liquid Glass reaction trays, menus, bottom sheets, dialogs (with Android 12+ background blur), glass scroll-to-bottom pill, and InsetGrouped contact/settings cards.\r\n\r\n---\r\n\r\n### Material You Pill Dock Preset\r\n- Added the **Material You Pill** preset to the Floating Bottom Bar editor, featuring a dynamic Monet capsule with a full-height active indicator pill wrapping both the tab icon and label, plus clean Liquid Glass chat handoff when switching themes.\r\n-",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.6.8.6A4374E1.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.8/WhatsPosed-0.6.8.6A4374E1.apk",
+              "size": 16703169
+            }
+          ]
+        },
+        {
+          "tag": "v0.6.7",
+          "name": "WhatsPosed v0.6.7",
+          "publishedAt": "2026-11-21T22:32:19Z",
+          "notes": "## What's New in v0.6.7\r\n\r\n### Semantic Release Update Checker\r\nRebuilt the update detection system across both the WhatsPosed app and the WhatsApp home screen popup:\r\n\r\n- **Plain Tag Support:** Switched from legacy commit-hash parsing to full semantic version comparison, natively supporting clean release tags (e.g., `0.6.6`, `0.6.7`) while ignoring draft and pre-release builds.\r\n- **WhatsApp Home Screen Update Popup:** Automatically notifies you on the WhatsApp home screen when a newer WhatsPosed release is published, displaying the new and installed versions, release date, formatted Markdown changelog, and **Update Now** / **Ignore** actions.\r\n- **Rate-Limit Caching & HMA Resilience:** Added a 10-minute in-memory API cache with proper GitHub API headers, duplicate-popup debounce protection, and a `BuildConfig.VERSION_NAME` fallback when package visibility is restricted (e.g., Hide My Applist).\r\n- **Detailed Update Diagnostics:** Added structured logging to LSPosed logs and Logcat (`WhatsPosedUpdate`) covering API responses, version comparisons, and popup triggers.",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.6.7.177A17F9.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.7/WhatsPosed-0.6.7.177A17F9.apk",
+              "size": 10330316
+            }
+          ]
+        },
+        {
+          "tag": "v0.6.6",
+          "name": "WhatsPosed v0.6.6",
+          "publishedAt": "2026-11-21T21:30:27Z",
+          "notes": "## What's New in v0.6.6\r\n\r\n### Liquid Glass Chat UI\r\nAdded a modern floating glass chat interface under **Customization > Conversation > Liquid Glass chat UI**:\r\n\r\n- **Separated Floating Islands:** Replaces flat top and bottom panels with sleek, separated liquid-glass islands — a compact back/avatar pill, a roomy contact header pill, a right action menu pill, a floating glass message composer capsule, and a detached circular mic/send button.\r\n- **Real-Time Backdrop Refraction:** Floats the conversation list and wallpaper cleanly underneath both the header and composer so scrolling messages refract live through the glass using an **Android 13+ AGSL RuntimeShader** (edge light bending, subtle chromatic dispersion, and specular highlights), with a smooth frosted-glass fallback on older Android versions.\r\n- **Material Expressive Compatible:** Automatically coordinates with Material Expressive so chat headers and composers remain crisp and unobstructed.\r\n\r\n### Elastic Message Stretch & Dedicated Editor\r\nAdded fluid, physics-based message interaction under **Customization > Conversation > Elastic message stretch**:\r\n\r\n- **Gel-Like Spring Physics:** Hold and drag any message bubble to stretch it smoothly toward your finger with volume-preserving squash-and-stretch and 3D perspective tilt, then release for a lively bouncy rebound — while keeping native swipe-to-reply, scrolling, and long-press reactions intact.\r\n- **Dedicated Editor with Live Preview:** Organized into a single clean preference entry that opens a custom Compose editor featuring **interactive preview bubbles** you can drag and bounce in real time, quick presets (**Soft**, **Jelly**, **Bouncy**), sliders for **Stretch distance**, **Bounce intensity**, **Jelly squash & stretch**, **3D tilt & rotation**, and **Hold delay**, plus a haptic feedback toggle and one-tap reset.\r\n\r\n### Chat Video Player Tools\r\nAdded enhanced gesture and speed controls for in-chat videos under **Media > Video > Chat video player tools**:\r\n\r\n- **Double-Tap Seeking:** Double-tap the left or right side of a video to skip **-10s / +10s** with an on-screen indicator.\r\n- **Playback Speed Pill:** Switch speeds on the fly (`1x`, `1.25x`, `1.5x`, `2x`, `2.5x`, `0.5x`) via a floating glass speed pill hooked directly into WhatsApp's Hero player.\r\n- **Edge Swipe Controls:** Swipe vertically along the left edge to adjust **screen brightness** and along the right edge to adjust **media volume** with a live progress indicator.\r\n-",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.6.6.B66CF1B4.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.6/WhatsPosed-0.6.6.B66CF1B4.apk",
+              "size": 10313932
+            }
+          ]
+        },
+        {
+          "tag": "v0.6.5",
+          "name": "WhatsPosed v0.6.5",
+          "publishedAt": "2026-11-21T18:36:36Z",
+          "notes": "## What's New in v0.6.5\r\n\r\n### Status Playback Controls\r\nAdded a floating, vertically draggable control pill for status viewing under **General > Status > Status playback controls**:\r\n\r\n- **Clean Fullscreen Toggle:** Hide all status chrome (progress bars, header, captions, and reply/reaction bar) with a single tap for distraction-free viewing, and restore everything cleanly on tap again.\r\n- **Video Playback Controls:** Directly hooks WhatsApp's `WaFbHeroPlayer` and underlying `HeroPlayer` to support **-5s / +5s seeking**, **instant pause/resume**, and **playback speed switching** (`1x`, `1.5x`, `2x`, `0.5x`), automatically resetting to `1x` on new video statuses.\r\n\r\n### Chat Floating Tools Upgraded to 3×2\r\nExpanded the floating chat tools menu with two new tools matching the Material Expressive / Monet dialog style:\r\n\r\n- **Text Styles (Unicode & WA Formatting):** Automatically pulls your current draft from the message box and live-previews styles including **Bold**, **Italic**, **Bold Italic**, **Monospace**, **Small Caps**, **Spaced**, **Bubbles**, **Upside Down**, **Bold Quote**, **Code Block**, and **Strikethrough** — insert or send in one tap.\r\n- **Spoiler & Blank Messages:**\r\n  - **Read More Spoiler:** Create collapsible teaser + hidden text messages using `U+3164` filler (includes a note that WhatsPosed's *\"Remove Read More\"* option may prevent collapsing locally).\r\n  - **Blank Message:** Send short, medium, or tall invisible messages using `U+FFA0` (Halfwidth Hangul Filler) without triggering WhatsApp's empty-message check.\r\n  -",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.6.5.F3F29EC2.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.5/WhatsPosed-0.6.5.F3F29EC2.apk",
+              "size": 10259208
+            }
+          ]
+        },
+        {
+          "tag": "v0.6.4",
+          "name": "WhatsPosed v0.6.4",
+          "publishedAt": "2026-11-21T13:12:46Z",
+          "notes": "## What's New in v0.6.4\r\n\r\n### Liquid Glass Dock Preset (iOS 26 Style)\r\nAdded a new **Liquid Glass** style preset under **Customization > Home Screen > Floating Bottom Bar > Style Preset**:\r\n\r\n- **Real-Time AGSL Glass Refraction (Android 13+):** Uses hardware-accelerated `RuntimeShader` for live edge refraction, subtle chromatic dispersion, and specular glass rim highlights (with automatic frosted glass fallback on older Android versions).\r\n- **Interactive Magnifying Lens & Fluid Physics:** Press and hold or swipe horizontally across the dock to reveal a magnifying liquid lens that refracts the tabs underneath in real time, stretches with velocity-reactive jelly/spring physics, gives subtle haptic feedback across tabs, and snaps smoothly to switch pages on release.\r\n- **Scroll-Hide Anchoring:** The liquid lens stays cleanly synchronized with the dock when hiding or revealing on scroll.\r\n\r\n### Material Expressive UI Engine (Android 16 QPR2)\r\nIntroduced a dedicated, modular **Material Expressive** editor with a live preview card under **Customization > General > Material Expressive**:\r\n\r\n- **Presets & Dynamic Monet Control:** Choose between `QPR2`, `Subtle`, and `Full Monet` presets, switch color sources (`Monet`, `Neutral`, `Custom`), dial in Monet intensity (`0–100%`), and sync directly with the built-in Monet color engine without conflicts.\r\n- **Customizable Card Geometry:** Switch between `Segmented`, `Rounded`, and `Soft` card styles with adjustable outer corner radius (`10–30dp`), card spacing (`0–8dp`), optional subtle tonal outlines, and flat divider removal.\r\n- **Modular Surface Toggles:** Independently enable or disable Expressive styling for chat list cards, settings and info panels, seamless top toolbar and single-pill search bar, chat composer bar (without touching wallpapers), expressive squircle FABs, dialogs/bottom sheets, and automatic Monet palette syncing for the **Chat Tools Bubble**.",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.6.4.3C06C169.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.4/WhatsPosed-0.6.4.3C06C169.apk",
+              "size": 10209540
+            }
+          ]
+        },
+        {
+          "tag": "v0.6.2",
+          "name": "WhatsPosed v0.6.2",
+          "publishedAt": "2026-11-21T10:06:12Z",
+          "notes": "## What's New in v0.6.2\r\n\r\nExpanded the **Chat Tools Bubble** into a 2x2 Material 3 Expressive tool panel with three new utilities:\r\n\r\n- **Text Repeater:** Repeat text or emojis into a single message with selectable separators (new line, space, or none). Supports inserting into the input box or sending immediately, with a 60,000-character safety limit.\r\n- **Snippets:** Save frequently used messages and templates persistently with optional titles. Tap any snippet to insert it into the chat input, send it instantly with one tap, or remove it anytime.\r\n- **Timer Send:** Schedule a message with quick presets (`10s`, `30s`, `60s`, `5m`) or a custom countdown in seconds. Displays a live amber countdown badge on the floating bubble with one-tap cancellation.\r\n- **Draft Auto-Fill:** Message Bomber, Text Repeater, Snippets, and Timer Send now automatically pull any existing draft text from the chat input box.",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.6.2.D89040C9.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.2/WhatsPosed-0.6.2.D89040C9.apk",
+              "size": 10151744
+            }
+          ]
+        },
+        {
+          "tag": "v0.6.1",
+          "name": "WhatsPosed v0.6.1",
+          "publishedAt": "2026-11-21T09:11:19Z",
+          "notes": "## What's New in v0.6.1\r\n\r\n- **Chat Tools Bubble:** Added a draggable floating bubble in chats (`Customization > Conversation > Chat Tools Bubble`) that snaps to screen edges and morphs into a Material 3 Expressive tool panel.\r\n- **Message Bomber:** Send repeated messages with custom count and delay (ms), complete with a live countdown badge and one-tap stop.\r\n- **Adaptive UI:** Automatically matches WhatsApp's Light/Dark theme and app language.",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.6.1.2C8DC4A8.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.1/WhatsPosed-0.6.1.2C8DC4A8.apk",
+              "size": 10135360
+            }
+          ]
+        },
+        {
+          "tag": "v0.6.0",
+          "name": "WhatsPosed v0.6.0",
+          "publishedAt": "2026-11-20T22:13:16Z",
+          "notes": "[NEW]\r\n\r\nAdded support for WhatsApp and WhatsApp Business 2.26.45.xx\r\nCustom Privacy now uses a dropdown for each option (Default, Enabled, Disabled), showing the global state. Contacts are removed from the list when every option follows the global setting\r\nLocked contacts are now hidden from the calls history, contact picker lists, status updates and status playback\r\n\"Remove sticker white outline\" now also removes the outline from the sticker style and video frames\r\nDisabling Meta AI now also turns off the remaining Meta AI features (search, voice, imagine, home tab, studio bots, assist and prompts)\r\n[IMPROVED]\r\n\r\nFaster startup and lower CPU usage while WhatsApp is running\r\n[FIXED]\r\n\r\nFixed high CPU usage in system_server on Android 11/12\r\nFixed root diagnostics freezing the app and the log dialog stopping before the run finished\r\nFixed contact verification failing on newer WhatsApp versions\r\nFixed keyboxes with a PKCS#8 private key not loading, and empty keybox entries causing errors\r\nFixed the text of selected chips blending into their background with the custom theme\r\nFixed the Home wallpaper transparency leaking into screens opened over it\r\nFixed contact names and original message references not loading on newer WhatsApp versions",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.6.0.D85CED60.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.0/WhatsPosed-0.6.0.D85CED60.apk",
+              "size": 10102124
+            }
+          ]
+        },
+        {
+          "tag": "v0.5.1",
+          "name": "WhatsPosed v0.5.1",
+          "publishedAt": "2026-11-20T21:13:54Z",
+          "notes": "• Added WhatsApp Pill Customizing\r\n=> Default, advanced and iOS glass modes\r\n=> wide customizing options",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.5.1.7C3377C7.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.5.1/WhatsPosed-0.5.1.7C3377C7.apk",
+              "size": 10210916
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mycolourfulgesture",
+      "name": "MyColourfulGesture",
+      "repo": "MyColourfulGesture",
+      "kind": "apk",
+      "packageId": "com.mycolourfulgesture",
+      "altPackageIds": [],
+      "author": "cq61tech",
+      "shortDescription": "LSPosed module that restyles the gesture pill: color, gradient, shapes, animation",
+      "description": "LSPosed module that restyles the gesture pill: color, gradient, shapes, animation",
+      "license": "",
+      "iconUrl": "https://raw.githubusercontent.com/cq61tech/MyColourfulGesture/main/screenshots/logo.png",
+      "bannerUrl": "",
+      "sourceUrl": "https://github.com/cq61tech/MyColourfulGesture",
+      "telegramUrl": "https://t.me/cq61stuff",
+      "websiteUrl": "",
+      "repoUrl": "",
+      "latestVersion": "build-24",
+      "whatsNew": "",
+      "releases": [
+        {
+          "tag": "build-24",
+          "name": "Build 24",
+          "publishedAt": "2026-11-18T14:59:14Z",
+          "notes": "",
+          "assets": [
+            {
+              "name": "MyColourfulGesture-build24-debug.apk",
+              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/build-24/MyColourfulGesture-build24-debug.apk",
+              "size": 58222722
+            },
+            {
+              "name": "MyColourfulGesture-build24-universal.apk",
+              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/build-24/MyColourfulGesture-build24-universal.apk",
+              "size": 2984396
+            }
+          ]
+        },
+        {
+          "tag": "v0.9.1",
+          "name": "MyColourfulGesture V0.9.1",
+          "publishedAt": "2026-11-17T21:41:29Z",
+          "notes": "• Added New Logo\r\n• Fixed Bugs\r\n=> `MyColourfulGesture-v0.9.1-universal.apk` is suggested file.",
+          "assets": [
+            {
+              "name": "MyColourfulGesture-v0.9.1-debug.apk",
+              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/v0.9.1/MyColourfulGesture-v0.9.1-debug.apk",
+              "size": 58222722
+            },
+            {
+              "name": "MyColourfulGesture-v0.9.1-universal.apk",
+              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/v0.9.1/MyColourfulGesture-v0.9.1-universal.apk",
+              "size": 2984396
+            }
+          ]
+        },
+        {
+          "tag": "v0.9.0",
+          "name": "MyColourfulGesture V0.9.0",
+          "publishedAt": "2026-11-10T13:41:03Z",
+          "notes": "# MyColourfulGesture v0.9.0\r\n\r\nThis update only includes APK optimizations and general debugging. There's not much else besides the improvements. The update jumped from version 0.6.0 to 0.9.0; this is the most stable version unless new issues arise.",
+          "assets": [
+            {
+              "name": "MyColourfulGesture-v0.9.0-debug.apk",
+              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/v0.9.0/MyColourfulGesture-v0.9.0-debug.apk",
+              "size": 58086545
+            },
+            {
+              "name": "MyColourfulGesture-v0.9.0-universal.apk",
+              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/v0.9.0/MyColourfulGesture-v0.9.0-universal.apk",
+              "size": 2848952
+            }
+          ]
+        },
+        {
+          "tag": "v0.6.0",
+          "name": "MyColourfulGesture V0.6.0",
+          "publishedAt": "2026-11-06T05:35:55Z",
+          "notes": "## Changelog\r\n• Personalization options have been improved\r\n• Added New Ready-made themes\r\n• Added New Animations\r\n• Fixed bugs",
+          "assets": [
+            {
+              "name": "MyColourfulGesture-v0.6.0.apk",
+              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/v0.6.0/MyColourfulGesture-v0.6.0.apk",
+              "size": 58517059
+            }
+          ]
+        },
+        {
+          "tag": "v0.5.0",
+          "name": "MyColourfulGesture V0.5.0",
+          "publishedAt": "2026-11-05T13:20:21Z",
+          "notes": "## Changelog\r\n• Added Russian\r\n• Added Español\r\n• Added Deutsch\r\n• Added Français",
+          "assets": [
+            {
+              "name": "MyColourfulGesture-build10.apk",
+              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/v0.5.0/MyColourfulGesture-build10.apk",
+              "size": 58424195
+            }
+          ]
+        },
+        {
+          "tag": "releases",
+          "name": "v0.4.0 - First public release ",
+          "publishedAt": "2026-11-05T05:16:27Z",
+          "notes": "### Pill customization\r\n- Color: stock, custom, or Monet (5 palettes, 13 tones), plus opacity (0% hides the pill)\r\n- Gradient: two-color or rainbow\r\n- Shapes: bar, dot, three dots\r\n- Size and position: width, height, corner radius, vertical offset, horizontal alignment\r\n- Outline with adjustable thickness and color\r\n- Animation: breathe or flow, with speed control\r\n- 12 presets: Pride, Aurora, Lava, Candy, Ocean, Glass, Neon, Sunset, Soft Monet, Minimal, Chunky, Dots\r\n- Live preview inside the app\r\n\r\n### How it hooks\r\n- Works with the System UI navigation handle and with the launcher's taskbar handle\r\n- The pill view is found at runtime by scanning the window tree, so no class names are hardcoded per ROM\r\n- Falls back to the stock pill if anything fails\r\n\r\n### App\r\n- Home page shows module status (active, partial, not detected), diagnostics and the default launcher\r\n- Material 3 theme with system Monet colors or a custom accent, optional pure black\r\n- Floating dock with width, height, opacity, text size and bottom distance options, and hide on scroll\r\n- English (default) and Turkish\r\n- Master hook switch, debug logging, hide launcher icon, restart System UI or launcher (root)\r\n- Backup and restore as JSON, reset options, update check against GitHub releases\r\n\r\n### Requirements\r\n- Root with Zygisk\r\n- LSPosed 2.0.1 or newer (libxposed API 101+)\r\n- Scope: System UI, this app, and your launcher\r\n\r\n### Known limitations\r\n- The pill cannot be made wider than the stock one yet\r\n- Animations redraw about 25 times per second, which costs a little battery\r\n- No per-app or contextual styles (keyboard, landscape, charging) yet\r\nEOF\r\ngit add CHANGELOG.md && git commit -m \"Add changelog\" && git push",
+          "assets": [
+            {
+              "name": "MyColourfulGesture-build9.apk",
+              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/releases/MyColourfulGesture-build9.apk",
+              "size": 58394711
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "edgebackcustomizer",
+      "name": "EdgeBackCustomizer",
+      "repo": "EdgeBackCustomizer",
+      "kind": "apk",
+      "packageId": "com.edgeback.customizer",
+      "altPackageIds": [],
+      "author": "cq61tech",
+      "shortDescription": "A XPosed Module For customizing edge back",
+      "description": "A XPosed Module For customizing edge back",
+      "license": "",
+      "iconUrl": "",
+      "bannerUrl": "",
+      "sourceUrl": "https://github.com/cq61tech/EdgeBackCustomizer",
+      "telegramUrl": "https://t.me/cq61stuff",
+      "websiteUrl": "",
+      "repoUrl": "",
+      "latestVersion": "v0.7.0",
+      "whatsNew": "• Added new languages",
+      "releases": [
+        {
+          "tag": "v0.7.0",
+          "name": "EdgeBackCustomizer v0.7.0",
+          "publishedAt": "2026-11-15T13:18:39Z",
+          "notes": "• Added new languages",
+          "assets": [
+            {
+              "name": "app-release.apk",
+              "url": "https://github.com/cq61tech/EdgeBackCustomizer/releases/download/v0.7.0/app-release.apk",
+              "size": 2695297
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "launchanimcustomizer",
+      "name": "LaunchAnimCustomizer",
+      "repo": "LaunchAnimCustomizer",
+      "kind": "apk",
+      "packageId": "com.cq61tech.launchanimcustomizer",
+      "altPackageIds": [],
+      "author": "cq61tech",
+      "shortDescription": "A Xposed Module for customizing pixel/aosp launcher animations",
+      "description": "A Xposed Module for customizing pixel/aosp launcher animations",
+      "license": "GPL-3.0",
+      "iconUrl": "",
+      "bannerUrl": "",
+      "sourceUrl": "https://github.com/cq61tech/LaunchAnimCustomizer",
+      "telegramUrl": "https://t.me/cq61stuff",
+      "websiteUrl": "",
+      "repoUrl": "",
+      "latestVersion": "V1.2.0",
+      "whatsNew": "• Added new ready-made themes\r\n• Added 16 Languages\r\n• Optimised for every device\r\n• Fixed Bugs\r\n• Wide Customization Options added",
+      "releases": [
+        {
+          "tag": "V1.2.0",
+          "name": "LaunchAnimCustomizer v1.2.0",
+          "publishedAt": "2026-11-16T10:58:57Z",
+          "notes": "• Added new ready-made themes\r\n• Added 16 Languages\r\n• Optimised for every device\r\n• Fixed Bugs\r\n• Wide Customization Options added",
+          "assets": [
+            {
+              "name": "LaunchAnimCustomizer-main.apk",
+              "url": "https://github.com/cq61tech/LaunchAnimCustomizer/releases/download/V1.2.0/LaunchAnimCustomizer-main.apk",
+              "size": 2668106
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chilledandroid",
+      "name": "ChilledAndroid",
+      "repo": "ChilledAndroid",
+      "kind": "apk",
+      "packageId": "com.cq61tech.chilledandroid",
+      "altPackageIds": [],
+      "author": "cq61tech",
+      "shortDescription": "A Root-needed app for porting chilled windows to android // closed source",
+      "description": "A Root-needed app for porting chilled windows to android // closed source",
+      "license": "Closed Source",
+      "iconUrl": "",
+      "bannerUrl": "",
+      "sourceUrl": "https://github.com/cq61tech/ChilledAndroid",
+      "telegramUrl": "https://t.me/cq61stuff",
+      "websiteUrl": "",
+      "repoUrl": "",
+      "latestVersion": "release",
+      "whatsNew": "# ChilledAndroid is tested on\r\nGalaxy S9+ | Evolution X 11.10 | Kernelsu Next |\r\n------------------------------------------------------------------------------",
+      "releases": [
+        {
+          "tag": "release",
+          "name": "ChilledAndroid",
+          "publishedAt": "2026-11-07T23:15:58Z",
+          "notes": "# ChilledAndroid is tested on\r\nGalaxy S9+ | Evolution X 11.10 | Kernelsu Next |\r\n------------------------------------------------------------------------------",
+          "assets": [
+            {
+              "name": "app-release.apk",
+              "url": "https://github.com/cq61tech/ChilledAndroid/releases/download/release/app-release.apk",
+              "size": 4553293
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "androidharlemshake",
+      "name": "AndroidHarlemShake",
+      "repo": "AndroidHarlemShake",
+      "kind": "apk",
+      "packageId": "dev.harlem.shake",
+      "altPackageIds": [],
+      "author": "cq61tech",
+      "shortDescription": "Bringing iOS 6 nostalgia to Android 12-17",
+      "description": "Bringing iOS 6 nostalgia to Android 12-17",
+      "license": "",
+      "iconUrl": "",
+      "bannerUrl": "",
+      "sourceUrl": "https://github.com/cq61tech/AndroidHarlemShake",
+      "telegramUrl": "https://t.me/cq61stuff",
+      "websiteUrl": "",
+      "repoUrl": "",
+      "latestVersion": "build-7",
+      "whatsNew": "HarlemShake apk",
+      "releases": [
+        {
+          "tag": "build-7",
+          "name": "build-7",
+          "publishedAt": "2026-11-16T08:44:42Z",
+          "notes": "HarlemShake apk",
+          "assets": [
+            {
+              "name": "HarlemShake.apk",
+              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-7/HarlemShake.apk",
+              "size": 7143118
+            }
+          ]
+        },
+        {
+          "tag": "build-6",
+          "name": "build-6",
+          "publishedAt": "2026-11-16T08:30:10Z",
+          "notes": "HarlemShake apk",
+          "assets": [
+            {
+              "name": "HarlemShake.apk",
+              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-6/HarlemShake.apk",
+              "size": 7139394
+            }
+          ]
+        },
+        {
+          "tag": "build-5",
+          "name": "build-5",
+          "publishedAt": "2026-11-16T08:21:32Z",
+          "notes": "HarlemShake apk",
+          "assets": [
+            {
+              "name": "HarlemShake.apk",
+              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-5/HarlemShake.apk",
+              "size": 7138738
+            }
+          ]
+        },
+        {
+          "tag": "build-4",
+          "name": "build-4",
+          "publishedAt": "2026-11-15T22:56:32Z",
+          "notes": "HarlemShake apk",
+          "assets": [
+            {
+              "name": "HarlemShake.apk",
+              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-4/HarlemShake.apk",
+              "size": 7137342
+            }
+          ]
+        },
+        {
+          "tag": "build-3",
+          "name": "build-3",
+          "publishedAt": "2026-11-15T22:50:21Z",
+          "notes": "HarlemShake apk",
+          "assets": [
+            {
+              "name": "HarlemShake.apk",
+              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-3/HarlemShake.apk",
+              "size": 7131014
+            }
+          ]
+        },
+        {
+          "tag": "build-2",
+          "name": "build-2",
+          "publishedAt": "2026-11-15T22:49:27Z",
+          "notes": "HarlemShake apk",
+          "assets": [
+            {
+              "name": "HarlemShake.apk",
+              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-2/HarlemShake.apk",
+              "size": 7131014
+            }
+          ]
+        },
+        {
+          "tag": "build-1",
+          "name": "build-1",
+          "publishedAt": "2026-11-15T22:30:24Z",
+          "notes": "HarlemShake apk",
+          "assets": [
+            {
+              "name": "HarlemShake.apk",
+              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-1/HarlemShake.apk",
+              "size": 7131014
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uygulamakomunaldatici",
+      "name": "UygulamaKonumAldatici",
+      "repo": "UygulamaKonumAldatici",
+      "kind": "apk",
+      "packageId": "io.github.cq61tech.konumaldatici",
+      "altPackageIds": [],
+      "author": "cq61tech",
+      "shortDescription": "Uygulamanın Konumunu Aldatmak için bir XPosed Modülü",
+      "description": "Uygulamanın Konumunu Aldatmak için bir XPosed Modülü",
+      "license": "Apache-2.0",
+      "iconUrl": "",
+      "bannerUrl": "",
+      "sourceUrl": "https://github.com/cq61tech/UygulamaKonumAldatici",
+      "telegramUrl": "https://t.me/cq61stuff",
+      "websiteUrl": "",
+      "repoUrl": "",
+      "latestVersion": "v0.4.0-9",
+      "whatsNew": "Fixed Important Bugs\r\nOptimised for universal experiment",
+      "releases": [
+        {
+          "tag": "v0.4.0-9",
+          "name": "UygulamaKonumAldatici v0.4.0-9",
+          "publishedAt": "2026-11-12T05:23:36Z",
+          "notes": "Fixed Important Bugs\r\nOptimised for universal experiment",
+          "assets": [
+            {
+              "name": "app-debug.apk",
+              "url": "https://github.com/cq61tech/UygulamaKonumAldatici/releases/download/v0.4.0-9/app-debug.apk",
+              "size": 38747388
+            }
+          ]
+        },
+        {
+          "tag": "v0.4.0",
+          "name": "UygulamaKonumAldatici v0.4.0",
+          "publishedAt": "2026-11-07T18:33:57Z",
+          "notes": "# First Release\r\n• Stable Version\r\n• Fixed Bugs\r\n• Optimised\r\n• Added WireGuard VPN\r\n\r\n# How to connect VPN?\r\nDownload a config from Proton VPN website and import it from your device\r\n\r\n# Languages\r\nNow we only have English and Turkish, but we will add other languages in the next update",
+          "assets": [
+            {
+              "name": "app-debug.apk",
+              "url": "https://github.com/cq61tech/UygulamaKonumAldatici/releases/download/v0.4.0/app-debug.apk",
+              "size": 38747388
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "badappletwrp",
+      "name": "BadAppleTWRP",
+      "repo": "BadAppleTWRP",
+      "kind": "zip",
+      "packageId": null,
+      "altPackageIds": [],
+      "author": "cq61tech",
+      "shortDescription": "A Project for watching bad_apple! on TWRP",
+      "description": "A Project for watching bad_apple! on TWRP",
+      "license": "MIT",
+      "iconUrl": "",
+      "bannerUrl": "",
+      "sourceUrl": "https://github.com/cq61tech/BadAppleTWRP",
+      "telegramUrl": "https://t.me/cq61stuff",
+      "websiteUrl": "",
+      "repoUrl": "",
+      "latestVersion": "v1.0.0",
+      "whatsNew": "Added calibration zip\r\n\r\n• Previous release is main zip of bad apple. This one is for calibration\r\n• If you searching for BadApple_TWRP.zip go to previous release\r\n\r\nThis is just for testing and calibrating settings\r\n\r\nIf you cant find main zip you can install from here",
+      "releases": [
+        {
+          "tag": "v1.0.0",
+          "name": "Rows calibration v1.0.0",
+          "publishedAt": "2026-10-30T13:22:19Z",
+          "notes": "Added calibration zip\r\n\r\n• Previous release is main zip of bad apple. This one is for calibration\r\n• If you searching for BadApple_TWRP.zip go to previous release\r\n\r\nThis is just for testing and calibrating settings\r\n\r\nIf you cant find main zip you can install from here",
+          "assets": [
+            {
+              "name": "BadApple_TWRP.1.zip",
+              "url": "https://github.com/cq61tech/BadAppleTWRP/releases/download/v1.0.0/BadApple_TWRP.1.zip",
+              "size": 330182
+            },
+            {
+              "name": "rows_calibration.zip",
+              "url": "https://github.com/cq61tech/BadAppleTWRP/releases/download/v1.0.0/rows_calibration.zip",
+              "size": 760
+            }
+          ]
+        },
+        {
+          "tag": "releases",
+          "name": "BadAppleTWRP v1.0.0",
+          "publishedAt": "2026-10-29T18:53:50Z",
+          "notes": "First stable release",
+          "assets": [
+            {
+              "name": "BadApple_TWRP.zip",
+              "url": "https://github.com/cq61tech/BadAppleTWRP/releases/download/releases/BadApple_TWRP.zip",
+              "size": 330182
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iosrepo",
+      "name": "Cydia & Sileo Repo",
+      "repo": "cq61tech.github.io",
+      "kind": "repo",
+      "packageId": null,
+      "altPackageIds": [],
+      "author": "cq61tech",
+      "shortDescription": "This repository is for modern iOS arm64 and Legacy iOS arm (dead repo tweaks, lost media tweaks) that I develop in my free time purely as a personal hobby. Expect simple, fun, and experimental projects rather than official releases.",
+      "description": "This repository is for modern iOS arm64 and Legacy iOS arm (dead repo tweaks, lost media tweaks) that I develop in my free time purely as a personal hobby. Expect simple, fun, and experimental projects rather than official releases.",
+      "license": "",
+      "iconUrl": "https://raw.githubusercontent.com/cq61tech/cq61tech.github.io/main/CydiaIcon.png",
+      "bannerUrl": "",
+      "sourceUrl": "https://github.com/cq61tech/cq61tech.github.io",
+      "telegramUrl": "https://t.me/cq61stuff",
+      "websiteUrl": "https://cq61tech.github.io",
+      "repoUrl": "https://cq61tech.github.io",
+      "latestVersion": "",
+      "whatsNew": "",
+      "releases": []
+    }
+  ]
+}

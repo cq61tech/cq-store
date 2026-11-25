@@ -1,0 +1,76 @@
+[
+  {
+    "id": "whatsposed",
+    "name": "WhatsPosed",
+    "repo": "WhatsPosed",
+    "kind": "apk",
+    "packageId": "com.cq61tech.whatsposed",
+    "altPackageIds": ["com.wmods.wppenhacer"],
+    "telegramUrl": "https://t.me/cq61stuff"
+  },
+  {
+    "id": "mycolourfulgesture",
+    "name": "MyColourfulGesture",
+    "repo": "MyColourfulGesture",
+    "kind": "apk",
+    "packageId": "com.mycolourfulgesture",
+    "telegramUrl": "https://t.me/cq61stuff"
+  },
+  {
+    "id": "edgebackcustomizer",
+    "name": "EdgeBackCustomizer",
+    "repo": "EdgeBackCustomizer",
+    "kind": "apk",
+    "packageId": "com.edgeback.customizer",
+    "telegramUrl": "https://t.me/cq61stuff"
+  },
+  {
+    "id": "launchanimcustomizer",
+    "name": "LaunchAnimCustomizer",
+    "repo": "LaunchAnimCustomizer",
+    "kind": "apk",
+    "packageId": "com.cq61tech.launchanimcustomizer",
+    "telegramUrl": "https://t.me/cq61stuff"
+  },
+  {
+    "id": "chilledandroid",
+    "name": "ChilledAndroid",
+    "repo": "ChilledAndroid",
+    "kind": "apk",
+    "packageId": "com.cq61tech.chilledandroid",
+    "license": "Closed Source",
+    "telegramUrl": "https://t.me/cq61stuff"
+  },
+  {
+    "id": "androidharlemshake",
+    "name": "AndroidHarlemShake",
+    "repo": "AndroidHarlemShake",
+    "kind": "apk",
+    "packageId": "dev.harlem.shake",
+    "telegramUrl": "https://t.me/cq61stuff"
+  },
+  {
+    "id": "uygulamakomunaldatici",
+    "name": "UygulamaKonumAldatici",
+    "repo": "UygulamaKonumAldatici",
+    "kind": "apk",
+    "packageId": "io.github.cq61tech.konumaldatici",
+    "telegramUrl": "https://t.me/cq61stuff"
+  },
+  {
+    "id": "badappletwrp",
+    "name": "BadAppleTWRP",
+    "repo": "BadAppleTWRP",
+    "kind": "zip",
+    "telegramUrl": "https://t.me/cq61stuff"
+  },
+  {
+    "id": "iosrepo",
+    "name": "Cydia & Sileo Repo",
+    "repo": "cq61tech.github.io",
+    "kind": "repo",
+    "repoUrl": "https://cq61tech.github.io",
+    "websiteUrl": "https://cq61tech.github.io",
+    "telegramUrl": "https://t.me/cq61stuff"
+  }
+]
