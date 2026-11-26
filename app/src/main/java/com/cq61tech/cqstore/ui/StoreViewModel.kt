@@ -76,6 +76,24 @@ class StoreViewModel(application: Application) : AndroidViewModel(application) {
         _state.update { it.copy(installed = scanInstalled(items)) }
     }
 
+    fun resumePendingInstall() {
+        val ctx = getApplication<Application>()
+        if (InstallManager.canInstallPackages(ctx)) {
+            val pending = InstallManager.consumePendingInstall(ctx) ?: return
+            _state.update { it.copy(selectedItemId = pending.itemId) }
+            startAssetDownload(
+                itemId = pending.itemId,
+                asset = ReleaseAsset(
+                    name = pending.assetName,
+                    url = pending.assetUrl,
+                    size = pending.assetSize,
+                ),
+            )
+        } else {
+            InstallManager.clearStalePendingInstall(ctx)
+        }
+    }
+
     private fun scanInstalled(items: List<StoreItem>): Map<String, InstalledAppInfo> {
         val ctx = getApplication<Application>()
         val result = mutableMapOf<String, InstalledAppInfo>()
@@ -112,14 +130,34 @@ class StoreViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun downloadAsset(item: StoreItem, asset: ReleaseAsset) {
-        downloadJob?.cancel()
+        startAssetDownload(item.id, asset)
+    }
+
+    private fun startAssetDownload(itemId: String, asset: ReleaseAsset) {
         val ctx = getApplication<Application>()
+        val isApk = asset.name.endsWith(".apk", ignoreCase = true)
+
+        if (isApk && !InstallManager.canInstallPackages(ctx)) {
+            InstallManager.savePendingInstall(ctx, itemId, asset)
+            showNotice("Allow install unknown apps for CQ Store")
+            InstallManager.requestInstallPermission(ctx)
+            return
+        }
+
+        if (isApk) {
+            val cached = InstallManager.getCachedApk(ctx, asset)
+            if (cached != null) {
+                InstallManager.installApk(ctx, cached)
+                return
+            }
+        }
+
+        downloadJob?.cancel()
         downloadJob = viewModelScope.launch {
             _state.update {
-                it.copy(download = DownloadState(item.id, asset.name, 0f))
+                it.copy(download = DownloadState(itemId, asset.name, 0f))
             }
             try {
-                val isApk = asset.name.endsWith(".apk", ignoreCase = true)
                 if (isApk) {
                     val file = InstallManager.downloadToCache(ctx, asset.url, asset.name) { progress ->
                         _state.update { st ->
@@ -127,10 +165,7 @@ class StoreViewModel(application: Application) : AndroidViewModel(application) {
                         }
                     }
                     _state.update { it.copy(download = null) }
-                    val started = InstallManager.installApk(ctx, file)
-                    if (!started) {
-                        showNotice("Allow install unknown apps for CQ Store, then tap again")
-                    }
+                    InstallManager.installApk(ctx, file)
                 } else {
                     val savedPath = InstallManager.downloadToDownloads(ctx, asset.url, asset.name) { progress ->
                         _state.update { st ->

@@ -12,12 +12,14 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.provider.Settings
 import androidx.core.content.FileProvider
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.withContext
 import okhttp3.Request
 import java.io.File
 import java.io.FileOutputStream
+import java.security.MessageDigest
 import kotlin.coroutines.coroutineContext
 
 data class InstalledAppInfo(
@@ -26,7 +28,17 @@ data class InstalledAppInfo(
     val versionCode: Long,
 )
 
+data class PendingInstall(
+    val itemId: String,
+    val assetName: String,
+    val assetUrl: String,
+    val assetSize: Long,
+)
+
 object InstallManager {
+
+    private const val PENDING_PREFS = "cq_store_pending_install"
+    private const val PENDING_TTL_MS = 10 * 60 * 1000L
 
     @Suppress("DEPRECATION")
     fun getInstalledInfo(context: Context, item: StoreItem): InstalledAppInfo? {
@@ -103,13 +115,84 @@ object InstallManager {
             .toList()
     }
 
+    fun canInstallPackages(context: Context): Boolean {
+        return context.packageManager.canRequestPackageInstalls()
+    }
+
+    fun requestInstallPermission(context: Context) {
+        val intent = Intent(
+            Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
+            Uri.parse("package:${context.packageName}")
+        ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        context.startActivity(intent)
+    }
+
+    fun savePendingInstall(context: Context, itemId: String, asset: ReleaseAsset) {
+        context.getSharedPreferences(PENDING_PREFS, Context.MODE_PRIVATE)
+            .edit()
+            .putString("item_id", itemId)
+            .putString("asset_name", asset.name)
+            .putString("asset_url", asset.url)
+            .putLong("asset_size", asset.size)
+            .putLong("timestamp", System.currentTimeMillis())
+            .apply()
+    }
+
+    fun consumePendingInstall(context: Context): PendingInstall? {
+        val prefs = context.getSharedPreferences(PENDING_PREFS, Context.MODE_PRIVATE)
+        val itemId = prefs.getString("item_id", null) ?: return null
+        val assetName = prefs.getString("asset_name", null) ?: return null
+        val assetUrl = prefs.getString("asset_url", null) ?: return null
+        val assetSize = prefs.getLong("asset_size", 0L)
+        val ts = prefs.getLong("timestamp", 0L)
+        prefs.edit().clear().apply()
+        if (System.currentTimeMillis() - ts > PENDING_TTL_MS) return null
+        return PendingInstall(itemId, assetName, assetUrl, assetSize)
+    }
+
+    fun clearStalePendingInstall(context: Context) {
+        val prefs = context.getSharedPreferences(PENDING_PREFS, Context.MODE_PRIVATE)
+        val ts = prefs.getLong("timestamp", 0L)
+        if (ts > 0L && System.currentTimeMillis() - ts > 1500L) {
+            prefs.edit().clear().apply()
+        }
+    }
+
+    private fun cacheFileFor(context: Context, url: String, fileName: String): File {
+        val dir = File(context.cacheDir, "apks").apply { mkdirs() }
+        val hash = MessageDigest.getInstance("SHA-256")
+            .digest(url.toByteArray())
+            .take(6)
+            .joinToString("") { "%02x".format(it) }
+        val safeName = fileName.replace(Regex("[^a-zA-Z0-9._-]"), "_")
+        return File(dir, "${hash}_$safeName")
+    }
+
+    fun getCachedApk(context: Context, asset: ReleaseAsset): File? {
+        val file = cacheFileFor(context, asset.url, asset.name)
+        if (!file.exists() || !file.isFile) return null
+        val len = file.length()
+        if (len <= 0L) return null
+        if (asset.size > 0L && len != asset.size) return null
+        return file
+    }
+
+    private fun pruneApkCache(dir: File, keep: File) {
+        val files = dir.listFiles().orEmpty()
+        val now = System.currentTimeMillis()
+        files.filter { it.name.endsWith(".part") && now - it.lastModified() > 60 * 60 * 1000L }
+            .forEach { it.delete() }
+        val apks = files
+            .filter { it.isFile && it.name.endsWith(".apk") && it.absolutePath != keep.absolutePath }
+            .sortedByDescending { it.lastModified() }
+        if (apks.size > 4) {
+            apks.drop(4).forEach { it.delete() }
+        }
+    }
+
     fun installApk(context: Context, file: File): Boolean {
-        if (!context.packageManager.canRequestPackageInstalls()) {
-            val intent = Intent(
-                Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
-                Uri.parse("package:${context.packageName}")
-            ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            context.startActivity(intent)
+        if (!canInstallPackages(context)) {
+            requestInstallPermission(context)
             return false
         }
         val uri = FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
@@ -127,35 +210,48 @@ object InstallManager {
         fileName: String,
         onProgress: (Float) -> Unit,
     ): File = withContext(Dispatchers.IO) {
-        val dir = File(context.cacheDir, "apks").apply { mkdirs() }
-        val safeName = fileName.replace(Regex("[^a-zA-Z0-9._-]"), "_")
-        val outFile = File(dir, safeName)
-        if (outFile.exists()) outFile.delete()
+        val outFile = cacheFileFor(context, url, fileName)
+        val dir = outFile.parentFile ?: File(context.cacheDir, "apks").apply { mkdirs() }
+        val partFile = File(dir, "${outFile.name}.part")
+        if (partFile.exists()) partFile.delete()
 
-        val req = Request.Builder().url(url).header("User-Agent", "CQStore").build()
-        CatalogRepository.httpClient.newCall(req).execute().use { resp ->
-            if (!resp.isSuccessful) error("Download failed (${resp.code})")
-            val body = resp.body ?: error("Empty download")
-            val total = body.contentLength()
-            body.byteStream().use { input ->
-                FileOutputStream(outFile).use { output ->
-                    val buf = ByteArray(16 * 1024)
-                    var readTotal = 0L
-                    while (true) {
-                        if (!coroutineContext.isActive) {
-                            outFile.delete()
-                            error("Cancelled")
-                        }
-                        val n = input.read(buf)
-                        if (n == -1) break
-                        output.write(buf, 0, n)
-                        readTotal += n
-                        if (total > 0L) {
-                            onProgress((readTotal.toFloat() / total.toFloat()).coerceIn(0f, 1f))
+        try {
+            val req = Request.Builder().url(url).header("User-Agent", "CQStore").build()
+            CatalogRepository.httpClient.newCall(req).execute().use { resp ->
+                if (!resp.isSuccessful) error("Download failed (${resp.code})")
+                val body = resp.body ?: error("Empty download")
+                val total = body.contentLength()
+                var readTotal = 0L
+                body.byteStream().use { input ->
+                    FileOutputStream(partFile).use { output ->
+                        val buf = ByteArray(16 * 1024)
+                        while (true) {
+                            if (!coroutineContext.isActive) {
+                                throw CancellationException("Cancelled")
+                            }
+                            val n = input.read(buf)
+                            if (n == -1) break
+                            output.write(buf, 0, n)
+                            readTotal += n
+                            if (total > 0L) {
+                                onProgress((readTotal.toFloat() / total.toFloat()).coerceIn(0f, 1f))
+                            }
                         }
                     }
                 }
+                if (total > 0L && readTotal != total) {
+                    error("Incomplete download")
+                }
             }
+            if (outFile.exists()) outFile.delete()
+            if (!partFile.renameTo(outFile)) {
+                partFile.copyTo(outFile, overwrite = true)
+                partFile.delete()
+            }
+            pruneApkCache(dir, outFile)
+        } catch (t: Throwable) {
+            partFile.delete()
+            throw t
         }
         onProgress(1f)
         outFile
@@ -191,7 +287,9 @@ object InstallManager {
                             val buf = ByteArray(16 * 1024)
                             var readTotal = 0L
                             while (true) {
-                                if (!coroutineContext.isActive) error("Cancelled")
+                                if (!coroutineContext.isActive) {
+                                    throw CancellationException("Cancelled")
+                                }
                                 val n = input.read(buf)
                                 if (n == -1) break
                                 output.write(buf, 0, n)
@@ -225,7 +323,7 @@ object InstallManager {
                         while (true) {
                             if (!coroutineContext.isActive) {
                                 outFile.delete()
-                                error("Cancelled")
+                                throw CancellationException("Cancelled")
                             }
                             val n = input.read(buf)
                             if (n == -1) break
