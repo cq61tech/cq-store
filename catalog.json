@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T01:28:48Z",
+  "updatedAt": "2026-11-26T16:16:35Z",
   "items": [
     {
       "id": "whatsposed",
@@ -172,24 +172,24 @@
       "telegramUrl": "https://t.me/cq61stuff",
       "websiteUrl": "",
       "repoUrl": "",
-      "latestVersion": "build-24",
-      "whatsNew": "",
+      "latestVersion": "v0.9.0-b25",
+      "whatsNew": "• Added pop up\r\n• Fixed bugs\r\n• Fixed important bugs\r\n\r\n## We recommend using universal.apk file",
       "releases": [
         {
-          "tag": "build-24",
-          "name": "Build 24",
-          "publishedAt": "2026-11-18T14:59:14Z",
-          "notes": "",
+          "tag": "v0.9.0-b25",
+          "name": "MyColourfulGesture V0.9.0-b25",
+          "publishedAt": "2026-11-26T14:25:50Z",
+          "notes": "• Added pop up\r\n• Fixed bugs\r\n• Fixed important bugs\r\n\r\n## We recommend using universal.apk file",
           "assets": [
             {
-              "name": "MyColourfulGesture-build24-debug.apk",
-              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/build-24/MyColourfulGesture-build24-debug.apk",
-              "size": 58222722
+              "name": "MyColourfulGesture-v0.9.0-b25-debug.apk",
+              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/v0.9.0-b25/MyColourfulGesture-v0.9.0-b25-debug.apk",
+              "size": 58239150
             },
             {
-              "name": "MyColourfulGesture-build24-universal.apk",
-              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/build-24/MyColourfulGesture-build24-universal.apk",
-              "size": 2984396
+              "name": "MyColourfulGesture-v0.9.0-b25-universal.apk",
+              "url": "https://github.com/cq61tech/MyColourfulGesture/releases/download/v0.9.0-b25/MyColourfulGesture-v0.9.0-b25-universal.apk",
+              "size": 3000816
             }
           ]
         },
@@ -287,9 +287,22 @@
       "telegramUrl": "https://t.me/cq61stuff",
       "websiteUrl": "",
       "repoUrl": "",
-      "latestVersion": "v0.7.0",
-      "whatsNew": "• Added new languages",
+      "latestVersion": "v0.7.0-1",
+      "whatsNew": "• pop up",
       "releases": [
+        {
+          "tag": "v0.7.0-1",
+          "name": "EdgeBackCustomizer v0.7.0-1",
+          "publishedAt": "2026-11-26T14:35:59Z",
+          "notes": "• pop up",
+          "assets": [
+            {
+              "name": "app-release.apk",
+              "url": "https://github.com/cq61tech/EdgeBackCustomizer/releases/download/v0.7.0-1/app-release.apk",
+              "size": 2711737
+            }
+          ]
+        },
         {
           "tag": "v0.7.0",
           "name": "EdgeBackCustomizer v0.7.0",
@@ -322,9 +335,27 @@
       "telegramUrl": "https://t.me/cq61stuff",
       "websiteUrl": "",
       "repoUrl": "",
-      "latestVersion": "V1.2.0",
-      "whatsNew": "• Added new ready-made themes\r\n• Added 16 Languages\r\n• Optimised for every device\r\n• Fixed Bugs\r\n• Wide Customization Options added",
+      "latestVersion": "v1.5.0-1",
+      "whatsNew": "• Fixed Bugs and added pop up",
       "releases": [
+        {
+          "tag": "v1.5.0-1",
+          "name": "LaunchAnimCustomizer v1.5.0-1",
+          "publishedAt": "2026-11-26T14:32:18Z",
+          "notes": "• Fixed Bugs and added pop up",
+          "assets": [
+            {
+              "name": "LaunchAnimCustomizer-main.apk",
+              "url": "https://github.com/cq61tech/LaunchAnimCustomizer/releases/download/v1.5.0-1/LaunchAnimCustomizer-main.apk",
+              "size": 2693718
+            },
+            {
+              "name": "LaunchAnimCustomizer-v1.5.0-1.apk",
+              "url": "https://github.com/cq61tech/LaunchAnimCustomizer/releases/download/v1.5.0-1/LaunchAnimCustomizer-v1.5.0-1.apk",
+              "size": 2693718
+            }
+          ]
+        },
         {
           "tag": "V1.2.0",
           "name": "LaunchAnimCustomizer v1.2.0",
@@ -392,9 +423,22 @@
       "telegramUrl": "https://t.me/cq61stuff",
       "websiteUrl": "",
       "repoUrl": "",
-      "latestVersion": "build-7",
-      "whatsNew": "HarlemShake apk",
+      "latestVersion": "v1.0",
+      "whatsNew": "• Fixed important bugs\r\n• Added pop up",
       "releases": [
+        {
+          "tag": "v1.0",
+          "name": "AndroidHarlemShake v1.0",
+          "publishedAt": "2026-11-26T14:19:46Z",
+          "notes": "• Fixed important bugs\r\n• Added pop up",
+          "assets": [
+            {
+              "name": "app-debug.apk",
+              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/v1.0/app-debug.apk",
+              "size": 7148074
+            }
+          ]
+        },
         {
           "tag": "build-7",
           "name": "build-7",
@@ -405,84 +449,6 @@
               "name": "HarlemShake.apk",
               "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-7/HarlemShake.apk",
               "size": 7143118
-            }
-          ]
-        },
-        {
-          "tag": "build-6",
-          "name": "build-6",
-          "publishedAt": "2026-11-16T08:30:10Z",
-          "notes": "HarlemShake apk",
-          "assets": [
-            {
-              "name": "HarlemShake.apk",
-              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-6/HarlemShake.apk",
-              "size": 7139394
-            }
-          ]
-        },
-        {
-          "tag": "build-5",
-          "name": "build-5",
-          "publishedAt": "2026-11-16T08:21:32Z",
-          "notes": "HarlemShake apk",
-          "assets": [
-            {
-              "name": "HarlemShake.apk",
-              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-5/HarlemShake.apk",
-              "size": 7138738
-            }
-          ]
-        },
-        {
-          "tag": "build-4",
-          "name": "build-4",
-          "publishedAt": "2026-11-15T22:56:32Z",
-          "notes": "HarlemShake apk",
-          "assets": [
-            {
-              "name": "HarlemShake.apk",
-              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-4/HarlemShake.apk",
-              "size": 7137342
-            }
-          ]
-        },
-        {
-          "tag": "build-3",
-          "name": "build-3",
-          "publishedAt": "2026-11-15T22:50:21Z",
-          "notes": "HarlemShake apk",
-          "assets": [
-            {
-              "name": "HarlemShake.apk",
-              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-3/HarlemShake.apk",
-              "size": 7131014
-            }
-          ]
-        },
-        {
-          "tag": "build-2",
-          "name": "build-2",
-          "publishedAt": "2026-11-15T22:49:27Z",
-          "notes": "HarlemShake apk",
-          "assets": [
-            {
-              "name": "HarlemShake.apk",
-              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-2/HarlemShake.apk",
-              "size": 7131014
-            }
-          ]
-        },
-        {
-          "tag": "build-1",
-          "name": "build-1",
-          "publishedAt": "2026-11-15T22:30:24Z",
-          "notes": "HarlemShake apk",
-          "assets": [
-            {
-              "name": "HarlemShake.apk",
-              "url": "https://github.com/cq61tech/AndroidHarlemShake/releases/download/build-1/HarlemShake.apk",
-              "size": 7131014
             }
           ]
         }
@@ -505,9 +471,22 @@
       "telegramUrl": "https://t.me/cq61stuff",
       "websiteUrl": "",
       "repoUrl": "",
-      "latestVersion": "v0.4.0-9",
-      "whatsNew": "Fixed Important Bugs\r\nOptimised for universal experiment",
+      "latestVersion": "v0.4.0-1",
+      "whatsNew": "• Fixed Bugs\r\n• Added pop up",
       "releases": [
+        {
+          "tag": "v0.4.0-1",
+          "name": "UygulamaKonumAldatici v0.4.0-1",
+          "publishedAt": "2026-11-26T14:29:45Z",
+          "notes": "• Fixed Bugs\r\n• Added pop up",
+          "assets": [
+            {
+              "name": "app-debug.apk",
+              "url": "https://github.com/cq61tech/UygulamaKonumAldatici/releases/download/v0.4.0-1/app-debug.apk",
+              "size": 38930966
+            }
+          ]
+        },
         {
           "tag": "v0.4.0-9",
           "name": "UygulamaKonumAldatici v0.4.0-9",
