@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T01:26:19Z",
+  "updatedAt": "2026-11-27T16:00:23Z",
   "items": [
     {
       "id": "whatsposed",
@@ -20,9 +20,27 @@
       "telegramUrl": "https://t.me/cq61stuff",
       "websiteUrl": "",
       "repoUrl": "",
-      "latestVersion": "v0.6.9-beta",
-      "whatsNew": "Just for pop up pls update",
+      "latestVersion": "v0.6.9",
+      "whatsNew": "## What's New in WhatsPosed v0.6.9\r\n\r\n### New Features\r\n- **WhatsApp Compatibility:** Added support for WhatsApp `2.26.46.xx`\r\n- **MIUIx Theme (MIUI 12–14) — Added to Themes Center:**\r\n  - Full MIUI-style WhatsApp UI theme pack available inside **Themes Center**\r\n  - Embedded MiSans typography and built-in Xiaomi home screen wallpapers with readability dimming\r\n  - Selectable accent colors (**MIUI Blue** and **WhatsApp Green**)\r\n  - Bordered frosted filter pills, MIUI squircle FAB, focused input box, and MIUIx chat bubbles\r\n  - Bottom-aligned MIUI 14 dialogs with 50/50 oval pill buttons\r\n  - Automatically pauses conflicting legacy wallpaper, Monet, manual color, and bubble settings while active\r\n  - New **MIUIx Frosted Dock** preset added to the **Floating Bottom Bar**\r\n- **Quick Tools Hub:**\r\n  - Consolidates home toolbar shortcuts (Ghost Mode, Freeze Last Seen, DND, Deleted Messages, Custom Privacy, New Chat, Translate, Restart, and Settings) into a unified 2×2 grid menu\r\n  - Live ON/OFF status badges and detailed control dialogs for each action\r\n  - Theme-aware dialog styling that adapts to MIUIx, iOS 27, and Material Expressive\r\n- **Voice Notes:** Added a playback speed slider, high-quality 48 kHz recording, adjustable noise suppression levels (Light, Medium, Strong, Max), and automatic transcoding for unsupported AAC audio\r\n- **Video Notes:** Added a download button for video notes\r\n- **Status:** Added an expiration countdown timer in the status viewer\r\n- **Custom Theme:** Automatically disables WhatsApp's built-in app themes while custom colors are enabled so color maps stay accurate, and restores your original theme when turned off\r\n\r\n### Improvements & Fixes\r\n- Refined floating bottom bar pill background logic and dock customization\r\n- Fixed button contrast and dialog clipping issues in the MIUIx theme\r\n- Fixed WhatsApp crashing on launch when separated groups are enabled\r\n- Fixed black system bar flickering over the home wallpaper on some devices\r\n- Fixed stuck feature-loading notifications when WhatsApp is killed during loading\r\n- Fixed hook compatibility on newer WhatsApp builds (props resolver, status profile photo, and tablet layout chat detection)\r\n-",
       "releases": [
+        {
+          "tag": "v0.6.9",
+          "name": "WhatsPosed v0.6.9",
+          "publishedAt": "2026-11-27T05:12:07Z",
+          "notes": "## What's New in WhatsPosed v0.6.9\r\n\r\n### New Features\r\n- **WhatsApp Compatibility:** Added support for WhatsApp `2.26.46.xx`\r\n- **MIUIx Theme (MIUI 12–14) — Added to Themes Center:**\r\n  - Full MIUI-style WhatsApp UI theme pack available inside **Themes Center**\r\n  - Embedded MiSans typography and built-in Xiaomi home screen wallpapers with readability dimming\r\n  - Selectable accent colors (**MIUI Blue** and **WhatsApp Green**)\r\n  - Bordered frosted filter pills, MIUI squircle FAB, focused input box, and MIUIx chat bubbles\r\n  - Bottom-aligned MIUI 14 dialogs with 50/50 oval pill buttons\r\n  - Automatically pauses conflicting legacy wallpaper, Monet, manual color, and bubble settings while active\r\n  - New **MIUIx Frosted Dock** preset added to the **Floating Bottom Bar**\r\n- **Quick Tools Hub:**\r\n  - Consolidates home toolbar shortcuts (Ghost Mode, Freeze Last Seen, DND, Deleted Messages, Custom Privacy, New Chat, Translate, Restart, and Settings) into a unified 2×2 grid menu\r\n  - Live ON/OFF status badges and detailed control dialogs for each action\r\n  - Theme-aware dialog styling that adapts to MIUIx, iOS 27, and Material Expressive\r\n- **Voice Notes:** Added a playback speed slider, high-quality 48 kHz recording, adjustable noise suppression levels (Light, Medium, Strong, Max), and automatic transcoding for unsupported AAC audio\r\n- **Video Notes:** Added a download button for video notes\r\n- **Status:** Added an expiration countdown timer in the status viewer\r\n- **Custom Theme:** Automatically disables WhatsApp's built-in app themes while custom colors are enabled so color maps stay accurate, and restores your original theme when turned off\r\n\r\n### Improvements & Fixes\r\n- Refined floating bottom bar pill background logic and dock customization\r\n- Fixed button contrast and dialog clipping issues in the MIUIx theme\r\n- Fixed WhatsApp crashing on launch when separated groups are enabled\r\n- Fixed black system bar flickering over the home wallpaper on some devices\r\n- Fixed stuck feature-loading notifications when WhatsApp is killed during loading\r\n- Fixed hook compatibility on newer WhatsApp builds (props resolver, status profile photo, and tablet layout chat detection)\r\n-",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.6.9.E21C54BE.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.9/WhatsPosed-0.6.9.E21C54BE.apk",
+              "size": 17432543
+            },
+            {
+              "name": "WhatsPosed-Business-0.6.9.E21C54BE.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.9/WhatsPosed-Business-0.6.9.E21C54BE.apk",
+              "size": 17383419
+            }
+          ]
+        },
         {
           "tag": "v0.6.9-beta",
           "name": "WhatsPosed v0.6.9-beta",
@@ -137,19 +155,6 @@
               "name": "WhatsPosed-0.6.1.2C8DC4A8.apk",
               "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.1/WhatsPosed-0.6.1.2C8DC4A8.apk",
               "size": 10135360
-            }
-          ]
-        },
-        {
-          "tag": "v0.6.0",
-          "name": "WhatsPosed v0.6.0",
-          "publishedAt": "2026-11-20T22:13:16Z",
-          "notes": "[NEW]\r\n\r\nAdded support for WhatsApp and WhatsApp Business 2.26.45.xx\r\nCustom Privacy now uses a dropdown for each option (Default, Enabled, Disabled), showing the global state. Contacts are removed from the list when every option follows the global setting\r\nLocked contacts are now hidden from the calls history, contact picker lists, status updates and status playback\r\n\"Remove sticker white outline\" now also removes the outline from the sticker style and video frames\r\nDisabling Meta AI now also turns off the remaining Meta AI features (search, voice, imagine, home tab, studio bots, assist and prompts)\r\n[IMPROVED]\r\n\r\nFaster startup and lower CPU usage while WhatsApp is running\r\n[FIXED]\r\n\r\nFixed high CPU usage in system_server on Android 11/12\r\nFixed root diagnostics freezing the app and the log dialog stopping before the run finished\r\nFixed contact verification failing on newer WhatsApp versions\r\nFixed keyboxes with a PKCS#8 private key not loading, and empty keybox entries causing errors\r\nFixed the text of selected chips blending into their background with the custom theme\r\nFixed the Home wallpaper transparency leaking into screens opened over it\r\nFixed contact names and original message references not loading on newer WhatsApp versions",
-          "assets": [
-            {
-              "name": "WhatsPosed-0.6.0.D85CED60.apk",
-              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.0/WhatsPosed-0.6.0.D85CED60.apk",
-              "size": 10102124
             }
           ]
         }
