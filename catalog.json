@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T16:16:35Z",
+  "updatedAt": "2026-11-27T01:26:19Z",
   "items": [
     {
       "id": "whatsposed",
@@ -20,9 +20,22 @@
       "telegramUrl": "https://t.me/cq61stuff",
       "websiteUrl": "",
       "repoUrl": "",
-      "latestVersion": "v0.6.8-1",
-      "whatsNew": "## What's New in v0.6.8-1\r\n\r\n### iOS 27 Theme Polish & Layout Fixes\r\n- **`•••` Liquid Glass Quick Menu:** Extra home toolbar action icons (such as ghost mode, restart, trash, and seen toggles) now automatically tuck into the left `•••` **Liquid Glass** dropdown menu alongside WhatsApp's native overflow menu (*More Options*), leaving only the frosted camera and green `+` button on the top right.\r\n- **R8-Safe Green `+` Alignment:** Replaced obfuscation-sensitive toolbar gravity reflection with direct layout positioning so the circular green new-chat button stays cleanly pinned to the right edge.\r\n- **Status & Search Bar Spacing:** Fixed an overlap where the 2nd-tier large header (*Chats / Updates / Calls*) clipped the top of circular status cards (`IGStatus`) and crowded the search bar.\r\n- **Archive Gesture & Duplicate Icon Guard:** Connected the hidden archive multi-tap / long-press shortcut directly to the large header title and automatically paused the legacy `New Chat` toolbar icon when the iOS 27 header is active.\r\n\r\n### Build Scripts & Documentation\r\n- **Upstream Sync & Rebrand Hardening:** Updated `rebrand.sh` to properly parse hyphenated version strings (`0.6.8-1`) and preserve all custom Compose activities (`ThemesActivity`, `ManualColorsActivity`, `MaterialExpressiveActivity`, `ElasticMessagesActivity`, `FloatingBarActivity`, `AppearanceActivity`) in `AndroidManifest.xml`, alongside safer merge protection in `wpmerge.sh`.\r\n- **README Refresh:** Updated `README.md` with the WhatsPosed logo, UI screenshots, compatibility matrix, and honest platform notes.\r\n-",
+      "latestVersion": "v0.6.9-beta",
+      "whatsNew": "Just for pop up pls update",
       "releases": [
+        {
+          "tag": "v0.6.9-beta",
+          "name": "WhatsPosed v0.6.9-beta",
+          "publishedAt": "2026-11-26T17:15:47Z",
+          "notes": "Just for pop up pls update",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.6.9-beta.8C6E46BF.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.9-beta/WhatsPosed-0.6.9-beta.8C6E46BF.apk",
+              "size": 17382230
+            }
+          ]
+        },
         {
           "tag": "v0.6.8-1",
           "name": "WhatsPosed v0.6.8-1",
@@ -137,19 +150,6 @@
               "name": "WhatsPosed-0.6.0.D85CED60.apk",
               "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.0/WhatsPosed-0.6.0.D85CED60.apk",
               "size": 10102124
-            }
-          ]
-        },
-        {
-          "tag": "v0.5.1",
-          "name": "WhatsPosed v0.5.1",
-          "publishedAt": "2026-11-20T21:13:54Z",
-          "notes": "• Added WhatsApp Pill Customizing\r\n=> Default, advanced and iOS glass modes\r\n=> wide customizing options",
-          "assets": [
-            {
-              "name": "WhatsPosed-0.5.1.7C3377C7.apk",
-              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.5.1/WhatsPosed-0.5.1.7C3377C7.apk",
-              "size": 10210916
             }
           ]
         }
