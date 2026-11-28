@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T16:00:23Z",
+  "updatedAt": "2026-11-28T00:58:53Z",
   "items": [
     {
       "id": "whatsposed",
@@ -20,9 +20,22 @@
       "telegramUrl": "https://t.me/cq61stuff",
       "websiteUrl": "",
       "repoUrl": "",
-      "latestVersion": "v0.6.9",
-      "whatsNew": "## What's New in WhatsPosed v0.6.9\r\n\r\n### New Features\r\n- **WhatsApp Compatibility:** Added support for WhatsApp `2.26.46.xx`\r\n- **MIUIx Theme (MIUI 12–14) — Added to Themes Center:**\r\n  - Full MIUI-style WhatsApp UI theme pack available inside **Themes Center**\r\n  - Embedded MiSans typography and built-in Xiaomi home screen wallpapers with readability dimming\r\n  - Selectable accent colors (**MIUI Blue** and **WhatsApp Green**)\r\n  - Bordered frosted filter pills, MIUI squircle FAB, focused input box, and MIUIx chat bubbles\r\n  - Bottom-aligned MIUI 14 dialogs with 50/50 oval pill buttons\r\n  - Automatically pauses conflicting legacy wallpaper, Monet, manual color, and bubble settings while active\r\n  - New **MIUIx Frosted Dock** preset added to the **Floating Bottom Bar**\r\n- **Quick Tools Hub:**\r\n  - Consolidates home toolbar shortcuts (Ghost Mode, Freeze Last Seen, DND, Deleted Messages, Custom Privacy, New Chat, Translate, Restart, and Settings) into a unified 2×2 grid menu\r\n  - Live ON/OFF status badges and detailed control dialogs for each action\r\n  - Theme-aware dialog styling that adapts to MIUIx, iOS 27, and Material Expressive\r\n- **Voice Notes:** Added a playback speed slider, high-quality 48 kHz recording, adjustable noise suppression levels (Light, Medium, Strong, Max), and automatic transcoding for unsupported AAC audio\r\n- **Video Notes:** Added a download button for video notes\r\n- **Status:** Added an expiration countdown timer in the status viewer\r\n- **Custom Theme:** Automatically disables WhatsApp's built-in app themes while custom colors are enabled so color maps stay accurate, and restores your original theme when turned off\r\n\r\n### Improvements & Fixes\r\n- Refined floating bottom bar pill background logic and dock customization\r\n- Fixed button contrast and dialog clipping issues in the MIUIx theme\r\n- Fixed WhatsApp crashing on launch when separated groups are enabled\r\n- Fixed black system bar flickering over the home wallpaper on some devices\r\n- Fixed stuck feature-loading notifications when WhatsApp is killed during loading\r\n- Fixed hook compatibility on newer WhatsApp builds (props resolver, status profile photo, and tablet layout chat detection)\r\n-",
+      "latestVersion": "v0.7.0",
+      "whatsNew": "## What's New in WhatsPosed v0.7.0\r\n\r\n### Fixes\r\n- **IGStatus:** Fixed the `GetViewConversation method not found` error on newer WhatsApp `2.26.46.xx` builds (including `2.26.46.82`) by resolving the conversation view method across the `ConversationsFragment` hierarchy",
       "releases": [
+        {
+          "tag": "v0.7.0",
+          "name": "WhatsPosed v0.7.0",
+          "publishedAt": "2026-11-27T17:10:05Z",
+          "notes": "## What's New in WhatsPosed v0.7.0\r\n\r\n### Fixes\r\n- **IGStatus:** Fixed the `GetViewConversation method not found` error on newer WhatsApp `2.26.46.xx` builds (including `2.26.46.82`) by resolving the conversation view method across the `ConversationsFragment` hierarchy",
+          "assets": [
+            {
+              "name": "WhatsPosed-0.7.0.EE4937DB.apk",
+              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.7.0/WhatsPosed-0.7.0.EE4937DB.apk",
+              "size": 17432543
+            }
+          ]
+        },
         {
           "tag": "v0.6.9",
           "name": "WhatsPosed v0.6.9",
@@ -142,19 +155,6 @@
               "name": "WhatsPosed-0.6.2.D89040C9.apk",
               "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.2/WhatsPosed-0.6.2.D89040C9.apk",
               "size": 10151744
-            }
-          ]
-        },
-        {
-          "tag": "v0.6.1",
-          "name": "WhatsPosed v0.6.1",
-          "publishedAt": "2026-11-21T09:11:19Z",
-          "notes": "## What's New in v0.6.1\r\n\r\n- **Chat Tools Bubble:** Added a draggable floating bubble in chats (`Customization > Conversation > Chat Tools Bubble`) that snaps to screen edges and morphs into a Material 3 Expressive tool panel.\r\n- **Message Bomber:** Send repeated messages with custom count and delay (ms), complete with a live countdown badge and one-tap stop.\r\n- **Adaptive UI:** Automatically matches WhatsApp's Light/Dark theme and app language.",
-          "assets": [
-            {
-              "name": "WhatsPosed-0.6.1.2C8DC4A8.apk",
-              "url": "https://github.com/cq61tech/WhatsPosed/releases/download/v0.6.1/WhatsPosed-0.6.1.2C8DC4A8.apk",
-              "size": 10135360
             }
           ]
         }
